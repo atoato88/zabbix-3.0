@@ -194,7 +194,7 @@ RUN \
  `# reinstall glibc for locales` \
   yum -y -q reinstall glibc-common && \
   cp /usr/local/etc/zabbix_agentd.conf /tmp && \
-  svn co https://svn.zabbix.com/${ZABBIX_VERSION} /usr/local/src/zabbix && \
+  svn co svn://svn.zabbix.com/${ZABBIX_VERSION} /usr/local/src/zabbix && \
   cd /usr/local/src/zabbix && \
   DATE=`date +%Y-%m-%d` && \
   sed -i "s/ZABBIX_VERSION.*'\(.*\)'/ZABBIX_VERSION', '\1 ($DATE)'/g" frontends/php/include/defines.inc.php && \
