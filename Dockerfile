@@ -147,10 +147,6 @@ ENV \
   ZP_User=zabbix \
   TERM=xterm
 
-ENV http_proxy http://192.168.0.64:10080
-ENV https_proxy http://192.168.0.64:10080
-ENV ftp_proxy http://192.168.0.64:10080
-
 # Layer: base
 RUN \
   yum clean all && \
